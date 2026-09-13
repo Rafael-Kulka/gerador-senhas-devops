@@ -38,7 +38,7 @@ function gerarSenha() {
     resultado.value = senha;
     mensagem.textContent = "";
 }
-
+ 
 async function copiarSenha() {
     if (!resultado.value) {
         mensagem.textContent = "Gere uma senha antes de copiar.";
