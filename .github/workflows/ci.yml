@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate HTML and JavaScript
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f script.js
+
+      - name: Validate JavaScript syntax
+        run: node --check script.js
+
+      - name: Validate HTML
+        run: npx --yes htmlhint index.html
