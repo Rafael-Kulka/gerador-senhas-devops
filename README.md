@@ -7,7 +7,7 @@ Projeto simples desenvolvido em **HTML e JavaScript** para uma atividade da disc
 - Gerar senha aleatória
 - Definir o tamanho da senha
 - Incluir letras maiúsculas
-- Incluir números
+- Incluir números 
 - Incluir símbolos
 - Copiar a senha para a área de transferência
 
