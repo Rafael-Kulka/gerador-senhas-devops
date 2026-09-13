@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f2f2f2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .senha {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #resultado {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #222;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        .opcao {
+            margin-bottom: 12px;
+        }
+
+        .opcao label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        input[type="number"] {
+            width: 70px;
+            padding: 5px;
+        }
+
+        #gerar {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #mensagem {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #555;
+            min-height: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+
+        <div class="senha">
+            <input id="resultado" type="text" readonly placeholder="Sua senha aparecerá aqui">
+            <button id="copiar">Copiar</button>
+        </div>
+
+        <div class="opcao">
+            <label>
+                Tamanho da senha
+                <input id="tamanho" type="number" min="4" max="30" value="12">
+            </label>
+        </div>
+
+        <div class="opcao">
+            <label>
+                <span>Incluir letras maiúsculas</span>
+                <input id="maiusculas" type="checkbox" checked>
+            </label>
+        </div>
+
+        <div class="opcao">
+            <label>
+                <span>Incluir números</span>
+                <input id="numeros" type="checkbox" checked>
+            </label>
+        </div>
+
+        <div class="opcao">
+            <label>
+                <span>Incluir símbolos</span>
+                <input id="simbolos" type="checkbox">
+            </label>
+        </div>
+
+        <button id="gerar">Gerar senha</button>
+
+        <p id="mensagem"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
