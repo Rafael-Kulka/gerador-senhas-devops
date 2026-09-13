@@ -11,7 +11,7 @@ function gerarSenha() {
     const letrasMinusculas = "abcdefghijklmnopqrstuvwxyz";
     const letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const caracteresNumericos = "0123456789";
-    const caracteresEspeciais = "!@#$%&*?";
+    const caracteresEspeciais = "!@#$%&*?"; 
 
     let caracteres = letrasMinusculas;
 
