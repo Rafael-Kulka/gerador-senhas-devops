@@ -21,7 +21,7 @@ function gerarSenha() {
 
     if (numeros.checked) {
         caracteres += caracteresNumericos;
-    }
+    } 
 
     if (simbolos.checked) {
         caracteres += caracteresEspeciais;
