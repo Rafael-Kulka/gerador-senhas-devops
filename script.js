@@ -11,7 +11,7 @@ function gerarSenha() {
     const letrasMinusculas = "abcdefghijklmnopqrstuvwxyz";
     const letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const caracteresNumericos = "0123456789";
-    const caracteresEspeciais = "!@#$%&*?";
+    const caracteresEspeciais = "!@#$%&*?"; 
 
     let caracteres = letrasMinusculas;
 
@@ -38,7 +38,7 @@ function gerarSenha() {
     resultado.value = senha;
     mensagem.textContent = "";
 }
-
+ 
 async function copiarSenha() {
     if (!resultado.value) {
         mensagem.textContent = "Gere uma senha antes de copiar.";
